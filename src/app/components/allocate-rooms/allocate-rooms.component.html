@@ -1,0 +1,125 @@
+
+<!-- <div>
+<header>
+    <div class="header-area ">
+        <div id="sticky-header" class="main-header-area">
+            <div class="container-fluid p-0">
+                <div class="row align-items-center no-gutters">
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="main-menu  d-none d-lg-block">
+                            <nav>
+                                <ul id="navigation">
+                                    <li><a class="active" href="">home</a></li>
+                                    <li><a href="">View UnBooked </a></li>
+                                    <li><a href="">View Booked </a></li>
+                                    <li><a href="">View Cancelled</a></li> <!--BOOKING HISTORY DETAILS-->
+                               <!--  </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2">
+                        <div class="logo-img">
+                            <a href="index.html">
+                                <img src="../../assets/img/logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-4 d-none d-lg-block">
+                        <div class="book_room">
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook-square"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="book_btn d-none d-lg-block">
+                                    <a class="popup-with-form" href="#test-form">My Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+</div>
+-->
+<header>
+  <div >
+      <nav class="nav">
+          <a class="nav-link active" href="">Home</a>
+          <a class="nav-link" href="allocateRoom">Allocated Rooms</a>
+          <a class="nav-link" href="unBooked">Un Allocated Rooms</a>
+          <a class="nav-link" href="">Cancelled Rooms</a>
+        </nav>
+  </div>
+</header>
+<hr>
+<body>
+<div style="margin:0 30px;">
+  <table>
+      <tr>
+          <th>User name</th>
+          <th>No of Members</th>
+          <th>Room Type</th>
+          <th>Room Size</th>
+          <th>Amount Paid</th>
+          <th>Room Number</th>
+          <th>Booking Status</th>
+          <th>Check In Date</th>
+          <th>Check Out Date</th>
+      </tr>
+      <tr *ngFor ="let record of bookedList" >
+          <td>
+              {{record.customerUserName}}
+          </td>
+
+          <td>
+              {{record.numberOfMembers}}
+          </td>
+          <td>
+              {{record.roomType}}
+          </td>
+          <td>
+            {{record.customerName}}
+          </td>
+          <td>
+              {{record.roomPrice}}
+          </td>
+          <td>
+              {{record.roomNumber}}
+          </td>
+          <td>
+            {{record.bookingStatus}}
+          </td>
+          <td>
+            {{record.checkInDate |date}}
+          </td>
+          <td>
+            {{record.checkOutDate | date}}
+          </td>
+
+      </tr>
+
+  </table>
+</div>
+</body>
